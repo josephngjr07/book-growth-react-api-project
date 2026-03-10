@@ -1,7 +1,27 @@
+import { useState } from 'react'
 
-const SearchBar = () => {
+const SearchBar = ({ onConfirm }) => {
+    const [query, setQuery] = useState("")
+
+    const handleChange = (event) => {
+        setQuery(event.target.value)
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        onConfirm(query)      
+    }
+
     return (
-        <h4>Search Bar</h4>
+        <form onSubmit={handleSubmit}>
+            <label>Book Search: </label>
+            <input
+                type="text"
+                value={query}
+                onChange={handleChange}
+            />
+            <button type="submit">Submit</button>
+        </form>
     )
 }
 
