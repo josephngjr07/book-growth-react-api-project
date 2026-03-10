@@ -20,7 +20,7 @@ Saved Books List
 My Library  - Filter by Status / Topic
 Title:
 Author:
-Status:
+Status: Drop Down List 
 Notes:
 [Delete]
 

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const SearchBar = ({ onConfirm }) => {
+const SearchBar = ({ onSearch }) => {
     const [query, setQuery] = useState("")
 
     const handleChange = (event) => {
@@ -9,7 +9,8 @@ const SearchBar = ({ onConfirm }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        onConfirm(query)      
+        onSearch(query)
+     
     }
 
     return (

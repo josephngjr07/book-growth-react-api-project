@@ -1,6 +1,7 @@
 
-async function getData() {
-  const url = "https://openlibrary.org/search.json?q=atomic+habits";
+
+async function getData(query) {
+  const url = `https://openlibrary.org/search.json?q=${query}`
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -8,7 +9,8 @@ async function getData() {
     }
 
     const result = await response.json();
-    console.log(result.docs[0]);
+    // console.log(result)
+    return result.docs;
   } catch (error) {
     console.error(error.message);
   }
