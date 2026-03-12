@@ -5,6 +5,7 @@ import BookSearch from "./pages/BookSearch"
 import { getData } from "./service/BookService"
 import { useState } from "react"
 import NavBar from "./components/NavBar/NavBar"
+import BookDetail from "./components/BookDetail/BookDetail"
 
 const App = () => {
 
@@ -27,6 +28,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<BookSearch results={results} onSearch={loadResults}/>}/>
         <Route path="/library" element={<BookLibrary library={library}/>} />
+        <Route path="/book/:id" element={<BookDetail results={results}/>}/>
       </Routes>
     <button onClick={getData}>Test API</button>
     </>
