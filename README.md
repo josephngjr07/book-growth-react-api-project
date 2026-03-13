@@ -24,3 +24,74 @@ Status: Drop Down List
 Notes:
 [Delete]
 
+# BookGrowth
+
+![App Screenshot](./screenshot.png)
+
+## Description
+
+BookGrowth is a book tracking application that allows users to search for books using the OpenLibrary API and save them into a personal reading library.
+
+Users can:
+- Search for books
+- View book details
+- Save books to a personal library
+- Add notes and reading status
+- Delete books from the library
+
+Saved books are stored using the Airtable API so that the data persists even after refreshing the page.
+
+The goal of this project was to practice building a full React application that integrates multiple APIs and implements CRUD functionality.
+
+---
+
+## Getting Started
+
+### Live App
+-- Enter Deployed App link here --
+
+### GitHub Repository
+https://github.com/josephngjr07/book-growth-react-api-project
+
+### Planning Materials
+- Wireframes
+
+
+---
+
+## Technologies Used
+
+- React
+- JavaScript
+- React Router
+- Fetch API
+- Airtable API
+- OpenLibrary API
+- HTML
+- CSS
+
+---
+
+## Attributions
+
+OpenLibrary API  
+https://openlibrary.org/developers/api
+
+Airtable API  
+https://airtable.com/api
+
+Book cover images provided by OpenLibrary.
+
+AI assistance (ChatGPT) was used to clarify React concepts and debugging during development.
+
+---
+
+## Next Steps
+
+Planned future improvements:
+
+- Edit saved books
+- Add book rating system
+- Filter books by status (Want to Read / Reading / Finished)
+- Add user authentication
+- Improve UI styling with a component library

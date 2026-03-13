@@ -9,7 +9,6 @@ const BookSearch = ({ results, onSearch }) => {
             <h4>Book Search Page</h4>
             <SearchBar onSearch={onSearch}/>
             <ResultList results={results}/>
-            <SaveForm />
         </>
     )
 }

@@ -13,7 +13,7 @@ const ResultList = ({ results }) => {
                     <li key={bookId}>
                         <Link to={`/book/${bookId}`}>
                             <p>Title: {result.title}</p>
-                            <p>Author: {result.author_name}</p>
+                            <p>Author: {result.author_name?.[0]}</p>
                         </Link>
                     </li>
                     )
