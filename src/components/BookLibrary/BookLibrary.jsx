@@ -1,22 +1,31 @@
 
-const BookLibrary = ({ library }) => {
+const BookLibrary = ({ library, onDelete }) => {
+
+
 
 
     return (
         <>
-        <h4>Book Library</h4>
-        <ul>
-            {library.map((book) => (
-              <li key={book.cover_i}>
-                <p>Title: {book.title}</p>
-                <p>Author: {book.author_name}</p>
-                <p>Img</p>
-                <p>Status: </p>
-                <p>Notes: </p>
-                {/* <button onClick={handleDelete}>Delete</button> */}
-              </li>  
-            ))}
-        </ul>
+          <h4>Book Library</h4>
+          {library.length === 0 && <p>Add a Book to the library</p>}
+          <ul>
+              {library.map((book) => {
+                const bookId = book.key.replace("/works/", "")
+
+                return(
+                <li key={bookId}>
+                  <p>Title: {book?.title}</p>
+                  <p>Author: {book?.author_name?.[0]}</p>
+                  {book.cover_i && (
+                    <img src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`} alt={book.title}/>
+                  )}
+                  <p>Status: {book.status}</p>
+                  <p>Notes: {book.notes}</p>
+                  <button onClick={() => onDelete(book)}>Delete</button>
+                </li>  
+                )
+              })}
+          </ul>
         </>
     )
 }

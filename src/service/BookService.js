@@ -9,7 +9,7 @@ async function getData(query) {
     }
 
     const result = await response.json();
-    console.log(result.docs[0])
+    console.log(result)
     return result.docs;
   } catch (error) {
     console.error(error.message);
