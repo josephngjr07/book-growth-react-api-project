@@ -55,6 +55,7 @@ https://github.com/josephngjr07/book-growth-react-api-project
 
 ### Planning Materials
 - Wireframes
+- User Stories
 
 
 ---
@@ -82,7 +83,6 @@ https://airtable.com/api
 
 Book cover images provided by OpenLibrary.
 
-AI assistance (ChatGPT) was used to clarify React concepts and debugging during development.
 
 ---
 
