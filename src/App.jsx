@@ -2,10 +2,13 @@ import { Routes, Route, useNavigate } from "react-router-dom"
 import BookLibrary from "./components/BookLibrary/BookLibrary"
 import SaveForm from "./components/SaveForm/SaveForm"
 import BookSearch from "./pages/BookSearch"
-import { getData } from "./service/BookService"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import NavBar from "./components/NavBar/NavBar"
 import BookDetail from "./components/BookDetail/BookDetail"
+import { getData } from "./service/BookService"
+import { fetchLibrary } from "./service/BookService"
+import { addBook } from "./service/BookService"
+import { deleteBook } from "./service/BookService"
 
 const App = () => {
 
@@ -14,6 +17,13 @@ const App = () => {
   const [library, setLibrary] = useState([])
   const [selectedBook, setSelectedBook] = useState()
 
+  useEffect(() => {
+    const loadBooks = async () => {
+      const data = await fetchLibrary()
+      setLibrary(data)
+    }
+    loadBooks()
+  }, [])
 
   const handleSearch = async (query) => {
     const data = await getData(query)
@@ -25,18 +35,21 @@ const App = () => {
     navigate("/save")
   }
 
-  const handleAdd = (savedBook) => {
-
+  const handleAdd = async (savedBook) => {
+    const newBook = await addBook(savedBook)
+    
     setLibrary (
       [...library,
-      savedBook]
+      newBook]
     )
     navigate("/library")
   }
 
-  const handleDelete = (book) => {
+  const handleDelete = async (book) => {
+    await deleteBook(book.id)
+
     const filteredBooks = library.filter((item) => {
-      return book.key !== item.key
+      return book.id !== item.id
     })
 
     setLibrary (

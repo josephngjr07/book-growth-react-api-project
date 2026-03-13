@@ -5,7 +5,6 @@ const ResultList = ({ results }) => {
     
     return (
         <>
-            <h4>Result List</h4>
             <ul>
                 {results.map((result) => {
                     const bookId = result.key.replace("/works/", "")

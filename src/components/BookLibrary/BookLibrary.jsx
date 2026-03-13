@@ -1,19 +1,15 @@
 
 const BookLibrary = ({ library, onDelete }) => {
 
-
-
-
     return (
         <>
           <h4>Book Library</h4>
           {library.length === 0 && <p>Add a Book to the library</p>}
           <ul>
               {library.map((book) => {
-                const bookId = book.key.replace("/works/", "")
 
                 return(
-                <li key={bookId}>
+                <li key={book.id}>
                   <p>Title: {book?.title}</p>
                   <p>Author: {book?.author_name?.[0]}</p>
                   {book.cover_i && (

@@ -20,8 +20,7 @@ const SaveForm = ({ selectedBook, onAdd }) => {
             ...selectedBook,
             ...formData
         }
-        
-        console.log(savedBook)
+             
         onAdd(savedBook)
 
         setFormData({
@@ -31,7 +30,7 @@ const SaveForm = ({ selectedBook, onAdd }) => {
         
     }
 
-        if (!selectedBook) return <p>No Book Selected</p>
+    if (!selectedBook) return <p>No Book Selected</p>
 
     return (
         <>
