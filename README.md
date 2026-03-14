@@ -1,32 +1,6 @@
-BookGrowth App
-
-##Wireframe
-
-#Header
-- BookGrowth
-
-#Search Bar
-[Search Books]             [Search]
-
-##Result List
-Title:
-Author:
-
-Save Form (Add Status + Notes)
-Status:
-Notes:
-
-Saved Books List
-My Library  - Filter by Status / Topic
-Title:
-Author:
-Status: Drop Down List 
-Notes:
-[Delete]
-
 # BookGrowth
 
-![App Screenshot](./screenshot.png)
+![alt text](image.png)
 
 ## Description
 
@@ -48,7 +22,7 @@ The goal of this project was to practice building a full React application that 
 ## Getting Started
 
 ### Live App
--- Enter Deployed App link here --
+https://book-growth-react-api-project.netlify.app
 
 ### GitHub Repository
 https://github.com/josephngjr07/book-growth-react-api-project
@@ -95,3 +69,28 @@ Planned future improvements:
 - Filter books by status (Want to Read / Reading / Finished)
 - Add user authentication
 - Improve UI styling with a component library
+
+
+## Wireframe
+
+#Header
+- BookGrowth
+
+#Search Bar
+[Search Books]             [Search]
+
+##Result List
+Title:
+Author:
+
+Save Form (Add Status + Notes)
+Status:
+Notes:
+
+Saved Books List
+My Library  - Filter by Status / Topic
+Title:
+Author:
+Status: Drop Down List 
+Notes:
+[Delete]
