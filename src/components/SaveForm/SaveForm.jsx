@@ -25,7 +25,7 @@ const SaveForm = ({ selectedBook, onAdd }) => {
 
         setFormData({
             notes: "",
-            status: "Want to Read"
+            status: ""
         })
         
     }
